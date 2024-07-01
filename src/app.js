@@ -22,6 +22,11 @@ class App {
   middlewares() {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
+    console.log(resolve(__dirname, '..', 'public', 'uploads'));
+    this.app.use((req, res, next) => {
+      console.log(`Incoming request for ${req.originalUrl}`);
+      next();
+    });
     this.app.use(express.static(resolve(__dirname, '..', 'public', 'uploads')));
   }
 
