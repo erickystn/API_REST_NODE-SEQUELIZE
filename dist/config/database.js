@@ -1,7 +1,9 @@
 "use strict";require('dotenv').config();
+const mysql2 = require('mysql2');
 
 module.exports = {
   dialect: 'mysql',
+  dialectModule: mysql2,
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,
   database: process.env.DATABASE,
