@@ -1,6 +1,6 @@
 class HomeController {
   async index(req, res) {
-    res.json('index');
+    res.json(`index ${req.originalUrl}`);
   }
 }
 
