@@ -22,7 +22,7 @@ class App {
   middlewares() {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
-    this.app.use(express.static(resolve(__dirname, '..', 'public', 'uploads')));
+    this.app.use('/img', express.static(resolve(__dirname, '..', 'public', 'uploads', 'img')));
   }
 
   routes() {
