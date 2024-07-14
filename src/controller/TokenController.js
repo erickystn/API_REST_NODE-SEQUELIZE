@@ -16,14 +16,14 @@ class TokenController {
       return res.status(401).json({ errors: ['Senha inválida'] });
     }
 
-    const { id } = user;
+    const { id, nome: nomeUser, email: emailUser } = user;
     const token = jwt.sign(
       { id, email },
       process.env.TOKEN_SECRET,
       { expiresIn: process.env.TOKEN_EXPIRATION },
     );
 
-    return res.json({ token });
+    return res.json({ token, user: { id, nome: nomeUser, email: emailUser } });
   }
 }
 
