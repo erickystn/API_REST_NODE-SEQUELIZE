@@ -8,7 +8,7 @@
         defaultValue: '',
         validate: {
           notEmpty: {
-            msg: 'Campo obrigatório',
+            msg: 'Campo de nome obrigatório',
           },
         },
       },
@@ -17,7 +17,7 @@
         defaultValue: '',
         validate: {
           notEmpty: {
-            msg: 'Campo obrigatório',
+            msg: 'Campo nome arquivo obrigatório',
           },
         },
       },

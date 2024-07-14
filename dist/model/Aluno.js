@@ -19,7 +19,7 @@
         validate: {
           len: {
             args: [3, 255],
-            msg: 'Sobrenome precisa conter de 3 a 254 caracteres',
+            msg: 'Sobrenome precisa ter de 3 a 254 caracteres',
           },
         },
       },

@@ -4,7 +4,7 @@ var _authMiddleware = require('../middlewares/authMiddleware'); var _authMiddlew
 
 const router = new (0, _express.Router)();
 
-// router.get('/', authMiddleware, userController.index);
+router.get('/', _authMiddleware2.default, _UserController2.default.index);
 router.get('/:id', _UserController2.default.show);
 
 router.post('/', _UserController2.default.store);
